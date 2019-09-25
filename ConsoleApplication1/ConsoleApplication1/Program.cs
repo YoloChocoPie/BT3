@@ -16,11 +16,13 @@ namespace ConsoleApplication1
             HLine(10, 'b'); Console.WriteLine();
 
             VLine(10, '*'); Console.WriteLine();
+
             DLine(1,  '*'); Console.WriteLine();
             DLine(2,  '*'); Console.WriteLine();
             DLine(3,  '*'); Console.WriteLine();
             DLine(4,  '*'); Console.WriteLine();
-            DrawTriangle(2, '*');
+
+            DrawTriangle(10, '*');
 
         }
 
@@ -44,13 +46,20 @@ namespace ConsoleApplication1
         }
 
         static void DrawTriangle(int n, char c) 
-        { 
+        {
+            
                 // first line 
-            HLine(n - 1, ' '); HLine(1, c); Console.WriteLine();
+            HLine(n - 1, ' '); 
+            HLine(1, c); 
+            Console.WriteLine();
             int a = 2, b = 1;
             for (int i = 0; i < n - 2; i++)
             {
                 HLine(n - a, ' ');
+                HLine(1, '*');
+                HLine(b, ' ');
+                HLine(1, c);
+                Console.WriteLine();
                 // fifth line
                 a = a + 1;
                 b = b + 2;
